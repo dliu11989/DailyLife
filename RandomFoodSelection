@@ -1,0 +1,19 @@
+import sys
+
+from random import randint
+
+Foods=raw_input("Please give the name of the restaurant,sepearted by space: ").split()
+
+#print Foods
+
+N=len(Foods)
+
+A=[]
+for i in xrange(0,100):
+    RN = randint(0, N - 1)
+    A.append(Foods[RN])
+
+
+#print RN
+
+print "Today's food is "+max(A,key=A.count)
